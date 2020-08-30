@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/ic_close"
+        app:layout_constraintHorizontal_bias="1"
+        android:id="@+id/closeBtn"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeBtn"
+        app:layout_constraintVertical_bias="0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pickupField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:focusedByDefault="false"
+            android:hint="Pickup from" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout1"
+        app:layout_constraintVertical_bias="0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dropField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:focusedByDefault="false"
+            android:hint="Drop at" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/distanceView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout2"
+        app:layout_constraintVertical_bias="0"
+        android:gravity="center"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/destinationNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Book a ride"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/distanceView"
+        app:layout_constraintVertical_bias="0"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
